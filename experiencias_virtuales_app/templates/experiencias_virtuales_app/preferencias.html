@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preferencias</title>
+</head>
+<body>
+    <h1>Preferencias</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="nombre">Nombre de tu experiencia virtual ideal:</label>
+        <input type="text" name="nombre" id="nombre" required><br>
+        <label for="descripcion">Describe la experiencia que mencionaste:</label>
+        <textarea name="descripcion" id="descripcion" required></textarea><br>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Talent</title>
+</head>
+<body>
+    <h1>Star Talent</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="nombre_experiencia">Nombre de experiencia a brindar:</label>
+        <input type="text" name="nombre_experiencia" id="nombre_experiencia" required><br>
+        <label for="costo_experiencia">Costo de experiencia en dólares (10 - 200):</label>
+        <input type="number" name="costo_experiencia" id="costo_experiencia" min="10" max="200" required><br>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <h2>Buscadores:</h2>
+    <form method="GET">
+        <label for="experiencia_deseada">¿Qué experiencias desean los espectadores?</label>
+        <select name="experiencia_deseada" id="experiencia_deseada">
+            <option value="" disabled selected>Selecciona una experiencia</option>
+            {% for preferencia in preferencias %}
+            <option value="{{ preferencia.id }}">{{ preferencia.nombre }}</option>
+            {% endfor %}
+        </select>
+        <p>Descripción de la experiencia seleccionada: {{ descripcion_experiencia }}</p>
+    </form>
+
+    <form method="GET">
+        <label for="precio">¿Cuál es el tamaño potencial para el precio de mi experiencia en dólares?</label>
+        <input type="number" name="precio" id="precio" min="10" max="200" required>
+        <p>Suma de espectadores con presupuesto igual o menor: {{ sum_espectadores }}</p>
+        <p>Suma de presupuestos de cada espectador en el listado: {{ sum_presupuestos }}</p>
+    </form>
+</body>
+</html>

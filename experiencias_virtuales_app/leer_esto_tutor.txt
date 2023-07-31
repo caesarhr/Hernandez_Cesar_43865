@@ -1,0 +1,29 @@
+¿Que se intento hacer pero al parecer fracasé en la ejecución?
+
+Pretendí hacer un sitio web que ofrece "experiencias virtuales", como clases
+de cocina, clases de baile, etc.. todo de manera virtual por "Star Talents"
+y compradas por "Espectadores"
+
+Visualmente, es un sitio con funcionalidades muy básicas que se describen a continuación:
+Teniendo su pestaña de “Inicio”, adicional se tendrían 3 clases: “Preferencias”, “Star-Talent” y “Espectador”
+
+La pestaña de Preferencias contendrá un formulario. Este formulario servirá como investigación de mercado para el Star Talent.
+-	El formulario contendrá 2 campos:
+    o	Nombre de tu experiencia virtual ideal. El campo es de texto libre.
+    o	Describe la experiencia que mencionaste. El campo de texto es libre.
+La pestaña de Star-Talent contendrá un formulario y dos buscadores. El formulario servirá para que los espectadores conozcan la oferta de servicios virtuales en su PPTO
+-	El formulario contendrá dos campos:
+    o	Nombre de experiencia a brindar
+    o	Costo de experiencia en dólares. Campo limitado a números entre 10 y 200.
+-	Dos buscadores con los siguientes campos y resultados esperados:
+    o	¿Qué experiencias desean los espectadores? El campo despliega un catálogo de “Nombre de tu experiencia virtual ideal” y cuando elige uno, se mostrará la descripción.
+    o	¿Cuál es el tamaño potencial para el precio de mi experiencia en dólares? El campo recibe números entre 10 y 200. Cuando se introduce una cifra, se entrega la suma de espectadores con un presupuesto igual o menor al capturado y la suma de los presupuestos de cada uno de los espectadores de este listado. Se utiliza la variable “Presupuesto en dólares” de la clase Espectador.
+La pestaña Espectador contendrá un formulario y un buscador. El formulario servirá para que Star Talent conozca los clientes potenciales a su costo de experiencia.
+-	El formulario contendrá 3 campos:
+    o	Nombre
+    o	Email
+    o	Presupuesto en dólares
+-	El buscador 
+    o	Experiencias en mi rango de presupuesto en dólares. Se ingresa un costo entre 10 y 200 que mostrará un listado de experiencias disponibles al costo menor o igual al ingresado, que se toma de la variable “Costo de experiencia en dólares” de la clase Star-Talent.
+
+Ya tiro la toalla.. he estado codeando sin descanso por días. Me rindo, hice lo que pude, ustedes califiquenme lo que consideren pertinente.

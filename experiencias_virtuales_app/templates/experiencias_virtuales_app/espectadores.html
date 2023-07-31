@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Espectadores</title>
+</head>
+<body>
+    <h1>Espectadores</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="presupuesto_dolares">Presupuesto en dólares:</label>
+        <input type="number" name="presupuesto_dolares" id="presupuesto_dolares" min="10" max="200" required><br>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <h2>Buscador:</h2>
+    <form method="GET">
+        <label for="rango_presupuesto">Experiencias en mi rango de presupuesto en dólares:</label>
+        <input type="number" name="rango_presupuesto" id="rango_presupuesto" min="10" max="200" required>
+        <ul>
+            {% for experiencia in experiencias %}
+            <li>{{ experiencia.nombre }} (Costo: {{ experiencia.costo_experiencia }})</li>
+            {% endfor %}
+        </ul>
+    </form>
+</body>
+</html>
